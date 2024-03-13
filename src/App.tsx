@@ -1,89 +1,23 @@
+import { ThemeProvider } from "@emotion/react";
+import { MainText } from "./components/MainText";
+import { theme } from "./components/DarkTheme";
+import Navbar from "./components/Navbar";
+import { Planet3DModel } from "./components/Planet3DModel";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <div className="section-banner">
-        <div id="star-1">
-          <div className="curved-corner-star">
-            <div id="curved-corner-bottomright"></div>
-            <div id="curved-corner-bottomleft"></div>
-          </div>
-          <div className="curved-corner-star">
-            <div id="curved-corner-topright"></div>
-            <div id="curved-corner-topleft"></div>
-          </div>
-        </div>
+      <ThemeProvider theme={theme}>
+        <Navbar />
 
-        <div id="star-2">
-          <div className="curved-corner-star">
-            <div id="curved-corner-bottomright"></div>
-            <div id="curved-corner-bottomleft"></div>
-          </div>
-          <div className="curved-corner-star">
-            <div id="curved-corner-topright"></div>
-            <div id="curved-corner-topleft"></div>
-          </div>
-        </div>
-
-        <div id="star-3">
-          <div className="curved-corner-star">
-            <div id="curved-corner-bottomright"></div>
-            <div id="curved-corner-bottomleft"></div>
-          </div>
-          <div className="curved-corner-star">
-            <div id="curved-corner-topright"></div>
-            <div id="curved-corner-topleft"></div>
-          </div>
-        </div>
-
-        <div id="star-4">
-          <div className="curved-corner-star">
-            <div id="curved-corner-bottomright"></div>
-            <div id="curved-corner-bottomleft"></div>
-          </div>
-          <div className="curved-corner-star">
-            <div id="curved-corner-topright"></div>
-            <div id="curved-corner-topleft"></div>
-          </div>
-        </div>
-
-        <div id="star-5">
-          <div className="curved-corner-star">
-            <div id="curved-corner-bottomright"></div>
-            <div id="curved-corner-bottomleft"></div>
-          </div>
-          <div className="curved-corner-star">
-            <div id="curved-corner-topright"></div>
-            <div id="curved-corner-topleft"></div>
-          </div>
-        </div>
-
-        <div id="star-6">
-          <div className="curved-corner-star">
-            <div id="curved-corner-bottomright"></div>
-            <div id="curved-corner-bottomleft"></div>
-          </div>
-          <div className="curved-corner-star">
-            <div id="curved-corner-topright"></div>
-            <div id="curved-corner-topleft"></div>
-          </div>
-        </div>
-
-        <div id="star-7">
-          <div className="curved-corner-star">
-            <div id="curved-corner-bottomright"></div>
-            <div id="curved-corner-bottomleft"></div>
-          </div>
-          <div className="curved-corner-star">
-            <div id="curved-corner-topright"></div>
-            <div id="curved-corner-topleft"></div>
-          </div>
-        </div>
-      </div>
-      <h1>Salvatore Polizzotti</h1>
-
-      <p className="read-the-docs">Coming soon...</p>
+        <Planet3DModel />
+        <MainText />
+      </ThemeProvider>
     </>
   );
 }
